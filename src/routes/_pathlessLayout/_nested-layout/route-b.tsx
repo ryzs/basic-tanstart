@@ -6,5 +6,9 @@ export const Route = createFileRoute('/_pathlessLayout/_nested-layout/route-b')(
 )
 
 function LayoutBComponent() {
-  return <div>I'm B!</div>
+  return (
+    <div className="p-4 bg-gray-800 rounded-lg">
+      <h2 className="text-xl font-bold">I'm B!</h2>
+    </div>
+  )
 }

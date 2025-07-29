@@ -11,6 +11,7 @@ import { DefaultCatchBoundary } from '~/components/DefaultCatchBoundary'
 import { NotFound } from '~/components/NotFound'
 
 import { seo } from '~/utils/seo'
+import '~/styles/global.css'
 
 export const Route = createRootRoute({
   head: () => ({
@@ -68,54 +69,54 @@ function RootDocument({ children }: { children: React.ReactNode }) {
       <head>
         <HeadContent />
       </head>
-      <body className="bg-gray-900 text-white">
-        <div className="container mx-auto px-4">
-          <header className="py-4">
-            <nav className="flex justify-between items-center">
-              <div className="flex gap-4 text-lg">
+      <body className="min-h-screen bg-gray-900 text-white">
+        <div className="container mx-auto p-4">
+          <header className="mb-8">
+            <nav className="flex items-center justify-between p-4 bg-gray-800 rounded-xl">
+              <div className="flex items-center gap-4 text-lg">
                 <Link
                   to="/"
                   activeProps={{
-                    className: 'font-bold',
+                    className: 'font-bold text-blue-400',
                   }}
                   activeOptions={{ exact: true }}
-                  className="hover:text-gray-300"
+                  className="hover:text-blue-400"
                 >
                   Home
                 </Link>{' '}
                 <Link
                   to="/posts"
                   activeProps={{
-                    className: 'font-bold',
+                    className: 'font-bold text-blue-400',
                   }}
-                  className="hover:text-gray-300"
+                  className="hover:text-blue-400"
                 >
                   Posts
                 </Link>{' '}
                 <Link
                   to="/users"
                   activeProps={{
-                    className: 'font-bold',
+                    className: 'font-bold text-blue-400',
                   }}
-                  className="hover:text-gray-300"
+                  className="hover:text-blue-400"
                 >
                   Users
                 </Link>{' '}
                 <Link
                   to="/route-a"
                   activeProps={{
-                    className: 'font-bold',
+                    className: 'font-bold text-blue-400',
                   }}
-                  className="hover:text-gray-300"
+                  className="hover:text-blue-400"
                 >
                   Pathless Layout
                 </Link>{' '}
                 <Link
                   to="/deferred"
                   activeProps={{
-                    className: 'font-bold',
+                    className: 'font-bold text-blue-400',
                   }}
-                  className="hover:text-gray-300"
+                  className="hover:text-blue-400"
                 >
                   Deferred
                 </Link>{' '}
@@ -125,14 +126,14 @@ function RootDocument({ children }: { children: React.ReactNode }) {
                   activeProps={{
                     className: 'font-bold',
                   }}
-                  className="hover:text-gray-300"
+                  className="text-gray-500 cursor-not-allowed"
                 >
                   This Route Does Not Exist
                 </Link>
               </div>
             </nav>
           </header>
-          <main className="py-8">{children}</main>
+          <main>{children}</main>
         </div>
         <TanStackRouterDevtools position="bottom-right" />
         <Scripts />
