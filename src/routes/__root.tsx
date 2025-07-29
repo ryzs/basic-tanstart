@@ -5,7 +5,7 @@ import {
   Scripts,
   createRootRoute,
 } from '@tanstack/react-router'
-import { TanStackRouterDevtools } from '@tanstack/react-router-devtools'
+import { TanStackRouterDevtoolsInProd } from '@tanstack/react-router-devtools'
 import * as React from 'react'
 import { DefaultCatchBoundary } from '~/components/DefaultCatchBoundary'
 import { NotFound } from '~/components/NotFound'
@@ -24,9 +24,8 @@ export const Route = createRootRoute({
         content: 'width=device-width, initial-scale=1',
       },
       ...seo({
-        title:
-          'TanStack Start | Type-Safe, Client-First, Full-Stack React Framework',
-        description: `TanStack Start is a type-safe, client-first, full-stack React framework. `,
+        title: 'A Modern Web Application Example',
+        description: 'An example of a modern web application with best practices.',
       }),
     ],
     links: [
@@ -135,7 +134,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
           </header>
           <main>{children}</main>
         </div>
-        <TanStackRouterDevtools position="bottom-right" />
+        <TanStackRouterDevtoolsInProd position="bottom-right" />
         <Scripts />
       </body>
     </html>
