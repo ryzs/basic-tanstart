@@ -14,7 +14,9 @@ function Home() {
         }}
       >
         <div className="p-8 bg-black bg-opacity-50 rounded-lg text-center">
-          <h1 className="text-5xl font-bold mb-4">Welcome Home!</h1>
+          <h1 className="text-5xl font-bold mb-4">
+            {import.meta.env.VITE_APP_TITLE}
+          </h1>
           <p className="text-xl text-gray-300">
             This is a simple, modern UI using Tailwind CSS with a parallax
             effect.
