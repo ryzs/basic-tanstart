@@ -11,7 +11,7 @@ import { DefaultCatchBoundary } from '~/components/DefaultCatchBoundary'
 import { NotFound } from '~/components/NotFound'
 
 import { seo } from '~/utils/seo'
-import '~/styles/global.css?url'
+import CSS from '~/styles/global.css?url'
 
 export const Route = createRootRoute({
   head: () => ({
@@ -49,6 +49,7 @@ export const Route = createRootRoute({
       },
       { rel: 'manifest', href: '/site.webmanifest', color: '#fffff' },
       { rel: 'icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: CSS },
     ],
     scripts: [
       {
