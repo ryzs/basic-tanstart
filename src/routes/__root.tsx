@@ -11,7 +11,7 @@ import { DefaultCatchBoundary } from '~/components/DefaultCatchBoundary'
 import { NotFound } from '~/components/NotFound'
 
 import { seo } from '~/utils/seo'
-import '~/styles/global.css'
+import '~/styles/global.css?url'
 
 export const Route = createRootRoute({
   head: () => ({
@@ -29,7 +29,7 @@ export const Route = createRootRoute({
       }),
     ],
     links: [
-      
+
       {
         rel: 'apple-touch-icon',
         sizes: '180x180',
